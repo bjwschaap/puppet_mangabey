@@ -17,15 +17,19 @@ class mangabey::install(
   } ->
   # Install RVM with Ruby 2.1.1
   class { 'rvm':
-    system_rubies => {
-      'ruby-2.1.1'    => {
-        'ensure'      => present,
+    install_dependencies => true,
+    system_rubies        => {
+      '2.1.1' => {
         'default_use' => true,
-        'proxy_url'   => $proxy_url } }
+        'proxy_url'   => $proxy_url
+      }
+    }
   } ->
   # Install Mangabey Gem
   rvm_gem { 'mangabey':
-    ensure => present,
+    ensure       => present,
+    ruby_version => 'ruby-2.1.1',
+    proxy_url    => $proxy_url,
   }
 
 }
