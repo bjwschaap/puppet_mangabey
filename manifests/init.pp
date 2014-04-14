@@ -1,20 +1,20 @@
-# == Class: puppet_mangabey
+# == Class: mangabey
 #
-# Full description of class puppet_mangabey here.
+# Full description of class mangabey here.
 #
 # === Parameters
 #
-# [*sample_parameter*]
-#   Explanation of what this parameter affects and what it defaults to.
+# [*proxy_url*]
+#  Optional. Proxy url to use for installing RVM, Ruby and Gems.
 #
-class puppet_mangabey (
-) inherits puppet_mangabey::params {
+class mangabey(
+  $proxy_url = $mangabey::params::proxy_url
 
-  # validate parameters here
+) inherits mangabey::params {
 
-  anchor { 'puppet_mangabey::begin': } ->
-  class  { '::puppet_mangabey::install': } ->
-  class  { '::puppet_mangabey::config': } ~>
-  class  { '::puppet_mangabey::service': } ->
-  anchor { 'puppet_mangabey::end': }
+  anchor { 'mangabey::begin': } ->
+  class  { '::mangabey::install': } ->
+  class  { '::mangabey::config': } ~>
+  class  { '::mangabey::service': } ->
+  anchor { 'mangabey::end': }
 }

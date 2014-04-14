@@ -1,4 +1,4 @@
-name          'bjwschaap-puppet_mangabey'
+name          'bjwschaap-mangabey'
 version       '0.0.1'
 source        'UNKNOWN'
 author        'bjwschaap'

@@ -1,6 +1,6 @@
-# == Class puppet_mangabey::config
+# == Class mangabey::config
 #
-# This class is called from puppet_mangabey
+# This class is called from mangabey
 #
-class puppet_mangabey::config {
+class mangabey::config {
 }

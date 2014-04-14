@@ -1,5 +1,6 @@
 fixtures:
   repositories:
     stdlib: "https://github.com/puppetlabs/puppetlabs-stdlib.git"
+    rvm: "git@se94alm001.k94.kvk.nl:/var/git/modules/maestrodev-rvm.git"
   symlinks:
-    puppet_mangabey: "#{source_dir}"
+    mangabey: "#{source_dir}"
