@@ -1,0 +1,10 @@
+--- 
+  !ruby/sym backends: 
+    - rspec
+    - yaml
+  !ruby/sym yaml: 
+    !ruby/sym datadir: /workspace/git/Oscar-Deployit/modules/puppet_mangabey/spec/fixtures/hieradata
+  !ruby/sym hierarchy: 
+    - "%{fqdn}/%{calling_module}"
+    - "%{calling_module}"
+    - default

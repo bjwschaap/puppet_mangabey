@@ -1,0 +1,39 @@
+---
+logrotate::basedir: /kvk
+basedir: '/kvk'
+repo_yum_url: 'http://repos.k94.kvk.nl/yum-repo'
+nexus_url: 'http://mvnrepo.k94.kvk.nl'
+basepackages:
+- 'bind-utils'
+- 'man'
+- 'wget'
+- 'sysstat'
+- 'zip'
+- 'unzip'
+- 'bc'
+- 'cronie'
+- 'cronie-anacron'
+- 'crontabs'
+- 'mailx'
+- 'nc'
+- 'lsof'
+- 'collectd-lvm'
+admlimkeys:
+  'woot':
+    ensure: 'present'
+    key: 'woot'
+    user: 'admlim'
+reposerver: 'http://repos.k94.kvk.nl'
+ntpservers:
+- '10.0.0.1'
+collectd.plugins:
+- 'load'
+java:
+- 'oracle-jdk-6u41-linux-x64'
+ldap.server.name: "ldap1.test.k94.kvk.nl"
+ldap.server.port: "389"
+ldap.server.admin: "uid=zmmdev,cn=users,ou=diensten,o=kvk,c=nl"
+ldap.server.admin.password: "7d1c8408991e2b10926aad23ef2e83f9"
+ldap.server.bind.dn: "os400-profile=wsalllogon,cn=accounts,os400-sys=as94aso1.k94.kvk.nl"
+ldap.server.bind.password: "waslogon"
+ldap.security.domain: "kvk.nl"

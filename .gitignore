@@ -1,0 +1,6 @@
+.*.sw?
+pkg
+.rspec_system
+spec/fixtures/manifests
+spec/fixtures/modules
+coverage
